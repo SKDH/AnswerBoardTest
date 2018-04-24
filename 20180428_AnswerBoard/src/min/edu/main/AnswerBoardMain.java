@@ -8,15 +8,15 @@ import min.edu.service.IAnswerboardService;
 
 public class AnswerBoardMain {
 	public static void main(String[] args) {
-		IAnswerboardService service = new AnswerboardServiceImpl();
+		// IAnswerboardService service = new AnswerboardServiceImpl();
 		
-		List<Answerboard_Dto> lists = service.selectAll();
+		/*List<Answerboard_Dto> lists = service.selectAll();
 		
 		for(Answerboard_Dto dto : lists)
-			System.out.println(dto);
+			System.out.println(dto);*/
 		
 		
-//		System.out.println(service.selectOne("1"));
+		// System.out.println(service.selectOne("1"));
 		
 		/*Answerboard_Dto dto = new Answerboard_Dto();
 		dto.setID("K005");
@@ -31,7 +31,7 @@ public class AnswerBoardMain {
 		dto.setPASSWORD(1234);
 		System.out.println(service.updateBoard(dto));*/
 		
-//		System.out.println(service.deleteBoardOne("3"));
+		// System.out.println(service.deleteBoardOne("3"));
 		
 		/*String[] n = {"3","4"};
 		System.out.println(service.deleteBoardMulti(n));*/
