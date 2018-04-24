@@ -10,10 +10,10 @@ public class AnswerBoardMain {
 	public static void main(String[] args) {
 		IAnswerboardService service = new AnswerboardServiceImpl();
 		
-		/*List<Answerboard_Dto> lists = service.selectAll();
+		List<Answerboard_Dto> lists = service.selectAll();
 		
 		for(Answerboard_Dto dto : lists)
-			System.out.println(dto);*/
+			System.out.println(dto);
 		
 		
 //		System.out.println(service.selectOne("1"));
@@ -36,12 +36,12 @@ public class AnswerBoardMain {
 		/*String[] n = {"3","4"};
 		System.out.println(service.deleteBoardMulti(n));*/
 		
-		Answerboard_Dto dto = new Answerboard_Dto();
+		/*Answerboard_Dto dto = new Answerboard_Dto();
 		dto.setSEQ(5);
 		dto.setID("K010");
 		dto.setTITLE("멋있는 군인아저씨");
 		dto.setCONTENT("멋있는 군인아저씨는 ");
 		dto.setPASSWORD(1234);
-		System.out.println(service.replyBoard(dto));
+		System.out.println(service.replyBoard(dto));*/
 	}
 }
