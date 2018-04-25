@@ -26,31 +26,6 @@ Answerboard_Dto dto = (Answerboard_Dto)request.getAttribute("dto");
         }
     </style>
 </head>
-<script>
-    window.onload = function(){
-        var obj = document.getElementById("etc");
-        obj.style.display = "none";
-    }
-    
-    function viewOption(){
-        var obj = document.getElementById("etc");
-        obj.style.display = "block";
-    }
-    
-    function deleteCmd(){
-        var obj = document.forms[0];
-        document.getElementById("pw").value = prompt("비밀번호를 입력해 주세요", "예)1234");
-        
-        document.getElementById("command").value = "delete";
-        obj.submit();
-    }
-    
-    function modifyCmd(){
-        var obj = document.forms[0];
-        document.getElementById("command").value = "modifyForm";
-        obj.submit();
-    }
-</script>
 
 <body>
     <%@ include file = "Header.jsp"%>
@@ -74,22 +49,8 @@ Answerboard_Dto dto = (Answerboard_Dto)request.getAttribute("dto");
                     <tr>
                         <td colspan="2"><%=dto.getCONTENT()%></td>
                     </tr>
-                    <tr>
-                        <th colspan="2" style="border-bottom: none">
-                            <input type="button" value="추가작업" onclick="viewOption()">
-                        </th>
-                    </tr>
                 </tbody>
             </table>
-        </div>
-        <div id="etc">
-            <form action="answerboardCtrl.jsp" method="post">
-              <input type="hidden" id="pw" value=""     name="pw">
-              <input type="hidden" id="command" value=""     name="command">
-               <input type="hidden" value="<%=dto.getSEQ()%>" name="seq">
-                <input type="button" value="삭제" onclick="deleteCmd()">
-                <input type="button" value="수정" onclick="modifyCmd()">
-            </form>
         </div>
 </body>
 </html>
