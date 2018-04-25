@@ -14,6 +14,13 @@
             margin-top: 30px;
             border-collapse: collapse;
         }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        #title:hover {
+            background-color: aquamarine;
+        }
     </style>
 </head>
 <script type="text/javascript">
@@ -105,30 +112,16 @@ List<Answerboard_Dto> lists = (List<Answerboard_Dto>)obj;
             %>
             <tr>
                 <th><input type="checkbox" name="chk" value="<%= dto.getSEQ() %>"></th>
-                <th>
-                    <%= dto.getSEQ() %>
+                <th><%= dto.getSEQ() %></th>
+                <th><%=dto.getID()%></th>
+                <th id="title" style="text-align:left">
+                    <a href="answerboardCtrl.jsp?command=detail&seq=<%=dto.getSEQ()%>"><%=picArrow(dto.getDEPTH())%><%=dto.getTITLE()%></a>
                 </th>
-                <th>
-                    <%=dto.getID()%>
-                </th>
-                <th style="text-align:left">
-                    <%=picArrow(dto.getDEPTH())%><%=dto.getTITLE()%>
-                </th>
-                <th>
-                    <%=dto.getREF()%>
-                </th>
-                <th>
-                    <%=dto.getSTEP()%>
-                </th>
-                <th>
-                    <%=dto.getDEPTH()%>
-                </th>
-                <th>
-                    <%=dto.getREADCOUNT()%>
-                </th>
-                <th>
-                    <%=dateChange(dto.getREGDATE())%>
-                </th>
+                <th><%=dto.getREF()%></th>
+                <th><%=dto.getSTEP()%></th>
+                <th><%=dto.getDEPTH()%></th>
+                <th><%=dto.getREADCOUNT()%></th>
+                <th><%=dateChange(dto.getREGDATE())%></th>
             </tr>
             <%
                 }

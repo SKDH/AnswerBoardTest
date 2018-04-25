@@ -61,6 +61,25 @@
             request.setAttribute("url", "./index.jsp");
             pageContext.forward("./error.jsp");
         }
+    } else if(command.equalsIgnoreCase("detail")) {
+        String seq = request.getParameter("seq");
+        Answerboard_Dto dto = service.selectOne(seq);
+        request.setAttribute("dto", dto);
+        pageContext.forward("./detailBoard.jsp");
+    } else if(command.equalsIgnoreCase("delete")) {
+        String pw = request.getParameter("pw");
+        String seq = request.getParameter("seq");
+
+        boolean isc = service.deleteBoardOne(seq);
+        if(isc) {
+            pageContext.forward("./answerboardCtrl.jsp?command=list");
+        } else {
+            Answerboard_Dto dto = service.selectOne(seq);
+            request.setAttribute("dto", dto);
+            pageContext.forward("./detailBoard.jsp");
+        }
+    } else if(command.equalsIgnoreCase("modifyForm")){
+        System.out.println(command);
     }
 %>
 <body>

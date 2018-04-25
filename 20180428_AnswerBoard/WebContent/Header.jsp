@@ -6,13 +6,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Header</title>
 <style>
-    h1 {
+    header {
         background-color: aqua;
-        padding: 10px 10px 10px 10px;
+        height: 100%;
+        text-align: center;
+    }
+    
+    #home {
+        position: absolute;
+        left: 10px;
+        opacity: 1;
+        cursor: pointer;
     }
 </style>
+<script>
+    function back(){
+        history.back(-1);
+    }
+</script>
 </head>
 <body>
-<h1>게시판 구현하기</h1>
+    <header>
+        <img id="home" src="./image/if_Streamline-18_185038.png" alt="home" onclick="back()">
+        <h1>게시판 구현하기</h1>
+    </header>
 </body>
 </html>
