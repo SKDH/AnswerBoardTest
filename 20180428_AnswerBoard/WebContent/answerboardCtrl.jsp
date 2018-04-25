@@ -79,7 +79,27 @@
             pageContext.forward("./detailBoard.jsp");
         }
     } else if(command.equalsIgnoreCase("modifyForm")){
-        System.out.println(command);
+        String seq = request.getParameter("seq");
+        Answerboard_Dto dto = service.selectOne(seq);
+        request.setAttribute("dto", dto);
+        pageContext.forward("updateBoard.jsp");
+    } else if(command.equalsIgnoreCase("updateCommit")) {
+        String seq = request.getParameter("seq");
+        String content = request.getParameter("content");
+        String pw = request.getParameter("pw");
+
+        Answerboard_Dto dto = new Answerboard_Dto();
+        dto.setSEQ(Integer.parseInt(seq));
+        dto.setCONTENT(content);
+        dto.setPASSWORD(Integer.parseInt(pw));
+        boolean isc = service.updateBoard(dto);
+        if(isc) {
+            Answerboard_Dto dto1 = service.selectOne(seq);
+            request.setAttribute("dto", dto1);
+            pageContext.forward("./detailBoard.jsp");
+        } else {
+            pageContext.forward("./answerboardCtrl.jsp?command=list");
+        }
     }
 %>
 <body>

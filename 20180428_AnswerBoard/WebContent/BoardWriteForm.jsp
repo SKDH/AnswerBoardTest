@@ -30,7 +30,7 @@
             title.focus();
             return false;
         } else if(content.value == "") {
-            contentid.focus();
+            content.focus();
             return false;
         } else if(password.value == "" || isNaN(password.value)) {
             alert("숫자만 입력해 주세요");
@@ -38,6 +38,8 @@
             password.focus();
             return false;
         }
+        content.value.replace("<", "&lt");
+        content.value.replace(">", "&gt");
         return true;
     }
 </script>
