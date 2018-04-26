@@ -86,7 +86,7 @@ List<Answerboard_Dto> lists = (List<Answerboard_Dto>)obj;
             <col width="100px">
             <col width="100px">
             <col width="100px">
-            <col width="100px">
+            <col width="300px">
             <col width="100px">
             <col width="100px">
             <tr>

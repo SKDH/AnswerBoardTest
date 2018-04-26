@@ -50,6 +50,10 @@ Answerboard_Dto dto = (Answerboard_Dto)request.getAttribute("dto");
         document.getElementById("command").value = "modifyForm";
         obj.submit();
     }
+    
+    function replyCmd(val){
+        location.href = "./answerboardCtrl.jsp?command=replyForm&seqone="+val;
+    }
 </script>
 
 <body>
@@ -89,6 +93,7 @@ Answerboard_Dto dto = (Answerboard_Dto)request.getAttribute("dto");
                <input type="hidden" value="<%=dto.getSEQ()%>" name="seq">
                 <input type="button" value="삭제" onclick="deleteCmd()">
                 <input type="button" value="수정" onclick="modifyCmd()">
+                <input type="button" value="답글" onclick="replyCmd(<%=dto.getSEQ()%>)">
             </form>
         </div>
 </body>

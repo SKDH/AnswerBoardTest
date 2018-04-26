@@ -100,6 +100,25 @@
         } else {
             pageContext.forward("./answerboardCtrl.jsp?command=list");
         }
+    } else if(command.equalsIgnoreCase("replyForm")) {
+        String seq = request.getParameter("seqone");
+        Answerboard_Dto dto1 = service.selectOne(seq);
+        request.setAttribute("dto", dto1);
+        pageContext.forward("./replyForm.jsp");
+    } else if(command.equalsIgnoreCase("reply")){
+        String seq = request.getParameter("seq");
+        String id = request.getParameter("id");
+        String title = request.getParameter("title");
+        String content = request.getParameter("content");
+        String password = request.getParameter("password");
+        Answerboard_Dto dto = new Answerboard_Dto();
+        dto.setSEQ(Integer.parseInt(seq));
+        dto.setID(id);
+        dto.setTITLE(title);
+        dto.setCONTENT(content);
+        dto.setPASSWORD(Integer.parseInt(password));
+        boolean isc = service.replyBoard(dto);
+        response.sendRedirect("./answerboardCtrl.jsp?command=list");
     }
 %>
 <body>
