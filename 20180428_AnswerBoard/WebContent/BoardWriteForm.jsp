@@ -64,13 +64,13 @@
                 <td><textarea cols="50" id="content" name="content" rows="5"></textarea></td>
                 <th><input type="password" id="password" name="password" maxlength="4"></th>
             </tr>
+            <tr>
+                <td colspan="4">
+                    <input type="submit" value="글입력">
+                    <input type="reset" value="재작성">
+                </td>
+            </tr>
         </table>
-        <tr>
-            <td colspan="4">
-                <input type="submit" value="글입력">
-                <input type="reset" value="재작성">
-            </td>
-        </tr>
     </form>
 </div>
 </body>

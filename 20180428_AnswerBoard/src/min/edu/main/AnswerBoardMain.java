@@ -1,10 +1,10 @@
 package min.edu.main;
 
-import java.util.List;
-
-import min.edu.dtos.Answerboard_Dto;
-import min.edu.service.AnswerboardServiceImpl;
-import min.edu.service.IAnswerboardService;
+//import java.util.List;
+//
+//import min.edu.dtos.Answerboard_Dto;
+//import min.edu.service.AnswerboardServiceImpl;
+//import min.edu.service.IAnswerboardService;
 
 public class AnswerBoardMain {
 	public static void main(String[] args) {
