@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+h1, h2 {
+    color: #007e7e;
+}
+
+h1 {
+    font-size: 150%;
+}
+
+h2 {
+    font-size: 130%
+}
+
+#gurantee {
+    line-height: 1.9em;
+    font-style: italic;
+    font-family: Georgia, "Time New Roman", Times, serif;
+    color: #444444;
+    /* border : 1px solid black; */
+    border-color: white;
+    border-style: dashed;
+    border-width: 2px; /* thin medium thick px */
+    border-radius: 15px;
+    background-color: rgb(167, 206, 206); /* #a7cece */
+    padding: 25px;
+    padding-left: 50px;
+    margin: 30px;
+    margin-right: 250px;
+    background-image: url("../image/star.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+#elixirs {
+    border-width: thin;
+    border-style: solid;
+    border-color: red;
+    width: 300px;
+    
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    
+    margin-left: 20px;
+    
+    text-align: center;
+    
+    background-image: url("../image/Html5.png");
+    background-repeat: repeat-x;
+    
+    line-height: 1em;
+    
+    float: right;
+}
+
+#elixirs h2 {
+    color: red;
+    text-shadow: 2px 2px;
+}
+
+#elixirs h3 {
+    color: #861563;
+}
+
+.artist {
+    font-style: italic;
+}
+
+.title {
+    font-weight: bold;
+}
+
+/* link: 방문하지 않은 상태, visited: 방문 후 상태, hover: 마우스를 올려놓았을때 */
+#elixirs a:link {
+    color: green;
+}
+
+#elixirs a:visited {
+    color: red;
+}
+
+#elixirs a:hover {
+    color: yellow;
+}
+/* 선택자 우선 순위 */
+/*
+    id class tag
+     1    0   1
+*/
+
+/* 요소 선택 */
+p#footer {
+    color: red;
+}
