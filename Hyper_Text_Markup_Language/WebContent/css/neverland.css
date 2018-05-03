@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+body {
+    background-color: #89e2b2;
+    font-family: Georgio, "Time New Toman", Times, serif;
+    font-size: small;
+    margin: 0;
+}
+
+#allcontent {
+    width: 800px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header {
+    background-color: #675c74;
+    margin: 10px;
+    height: 108px;
+}
+
+#main {
+    background: #efe5d0 url(../image/background.png) top left;
+    font-size: 105%;
+    padding: 15px;
+    margin: 0px 10px 10px 10px;
+    width: 470px;
+    float: left;
+}
+
+#side {
+    background: #efe5d0 url(../image/background.png) top left;
+    font-size: 105%;
+    padding: 15px;
+    margin: 0px 10px 10px 470px;
+/*
+    width: 280px;
+    float: right;
+*/
+}
+
+#footer {
+    background-color: #675c47;
+    color: #efe5d0;
+    text-align: center;
+    margin: 10px;
+    font-size: 90%;
+/*    clear: right;*/
+    clear: left;
+}
+
+h1 {
+    font-size: 120%;
+    color: #954b4b;
+}
+
+.slogan {
+    color: #954b4b;
+}
+
+.beanheading {
+    text-align: center;
+    line-height: 1.8em;
+}
+
+a:link {
+    color: #b75555;
+    text-decoration: none;
+    border-bottom: thin dotted #b75555;
+}
+
+a:visited{
+    color: #657c47;
+    text-decoration: none;
+    border: thin dotted #657c47;
+}
